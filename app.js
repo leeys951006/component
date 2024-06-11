@@ -1,8 +1,8 @@
-const a = () => {
+const a = (a, b, c) => {
   return {
-    name: '',
-    age: 0,
-    job: '',
+    name: a,
+    age: b,
+    job: c,
   };
 };
 
