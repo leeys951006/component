@@ -32,22 +32,29 @@
         '황재민',
       ];
 
-      const tagComponent = (tagName, tagNode) => {
-        return `<${tagName}>${tagNode}</${tagName}>`;
+      const tagComponent = (tagName, textNode) => {
+        return `<${tagName}>${textNode}</${tagName}>`;
       };
+
+      let n = [];
+      names.forEach(function (name) {
+        if (name === '이연승') {
+          n.push(`<h1>${name}</h1>`);
+        } else {
+          n.push(`<p>${name}</p>`);
+        }
+      });
+      let j = n.join('');
+      console.log(j);
+      console.log(n);
       // 조립하는 파트
       const app = () => {
         return `
-          ${tagComponent(`'h1', '${name}입니다'`)}
-          ${tagComponent('h2', '정호연입니다')}
-          ${tagComponent('h3', '고겨울입니다')}
+          ${tagComponent('div', j)}
+
           `;
       };
       console.log(app());
-
-      names.forEach(function (name) {
-        console.log(name);
-      });
 
       const render = () => {
         root.innerHTML = app();
