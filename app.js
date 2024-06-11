@@ -6,4 +6,7 @@ const a = () => {
   };
 };
 
-console.log(a());
+// console.log(a());
+
+const b = a();
+console.log(b);
