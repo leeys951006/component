@@ -10,19 +10,23 @@
     <script>
       const root = document.getElementById('root');
 
-      const h1Component = () => {
-        return `<h1>이연승입니다</h1>`;
+      const h1Component = (tagName, textNode) => {
+        return `<${tagName}>${textNode}</${tagName}>`;
       };
-
+      // 조립하는 파트
       const app = () => {
-        return `${h1Component()}`;
+        return `
+        ${h1Component('h1', '이연승입니다')}
+        ${h1Component('h2', '정호연입니다')}
+        ${h1Component('h3', '고겨울입니다')}
+        `;
       };
+      console.log(app());
 
       const render = () => {
         root.innerHTML = app();
       };
       render();
-      console.log(app());
     </script>
   </body>
 </html>
