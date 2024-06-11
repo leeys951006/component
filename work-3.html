@@ -10,15 +10,15 @@
     <script>
       const root = document.getElementById('root');
 
-      const h1Component = (tagName, textNode) => {
+      const tagComponent = (tagName, textNode) => {
         return `<${tagName}>${textNode}</${tagName}>`;
       };
       // 조립하는 파트
       const app = () => {
         return `
-        ${h1Component('h1', '이연승입니다')}
-        ${h1Component('h2', '정호연입니다')}
-        ${h1Component('h3', '고겨울입니다')}
+        ${tagComponent('h1', '이연승입니다')}
+        ${tagComponent('h2', '정호연입니다')}
+        ${tagComponent('h3', '고겨울입니다')}
         `;
       };
       console.log(app());
