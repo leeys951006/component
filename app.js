@@ -11,4 +11,4 @@ const a = (a, b, c) => {
 const b = a('이연승', 30, '미남');
 console.log(b);
 b.adress = '대전';
-console.log(b);
+console.log('두번째 b:', b);
