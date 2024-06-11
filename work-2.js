@@ -7,12 +7,16 @@ function formatHTML() {
   let html = `
   <html>
   <head>
-  <title></title>
+  <title>${htmlData.title}</title>
   </head>
   <body>
-  <h1></h1>
-  <p></p>
+  <h1>${htmlData.h1}</h1>
+  <p>${htmlData.p}</p>
   </body>
   </html>
   `;
+
+  return html;
 }
+
+console.log(formatHTML());
